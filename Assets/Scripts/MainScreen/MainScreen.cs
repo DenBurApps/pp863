@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace MainScreen
@@ -18,12 +19,18 @@ namespace MainScreen
 
         private void OnEnable()
         {
-            
+            _classic.onClick.AddListener(() => SceneManager.LoadScene("ClassicGame"));
+            _speed.onClick.AddListener(() => SceneManager.LoadScene("SpeedScene"));
+            _combo.onClick.AddListener(() => SceneManager.LoadScene("ComboScene"));
+            _chaos.onClick.AddListener(() => SceneManager.LoadScene("ChaosScene"));
         }
 
         private void OnDisable()
         {
-            
+            _classic.onClick.RemoveListener(() => SceneManager.LoadScene("ClassicGame"));
+            _speed.onClick.RemoveListener(() => SceneManager.LoadScene("SpeedScene"));
+            _combo.onClick.RemoveListener(() => SceneManager.LoadScene("ComboScene"));
+            _chaos.onClick.RemoveListener(() => SceneManager.LoadScene("ChaosScene"));
         }
 
         private void Start()

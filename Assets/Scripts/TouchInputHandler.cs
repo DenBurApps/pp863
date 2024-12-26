@@ -44,7 +44,6 @@ public class TouchInputHandler : MonoBehaviour
                 {
                     if (EventSystem.current.IsPointerOverGameObject(touch.fingerId))
                     {
-                        Debug.Log("UI element clicked, ignoring touch");
                         yield return null;
                         continue;
                     }
@@ -55,7 +54,6 @@ public class TouchInputHandler : MonoBehaviour
 
                     if (hit.collider != null)
                     {
-                        Debug.Log("Hit detected on: " + hit.collider.gameObject.name);
                         if (hit.collider.TryGetComponent(out Flash obj))
                         {
                             FlashClicked?.Invoke(obj);
@@ -63,7 +61,6 @@ public class TouchInputHandler : MonoBehaviour
                     }
                     else
                     {
-                        Debug.Log("Missed, no object detected");
                         Missed?.Invoke();
                         var gameObject = Instantiate(_incorrectTouchObject);
                         gameObject.transform.position = touchPosition;

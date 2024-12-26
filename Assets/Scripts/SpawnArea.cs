@@ -13,4 +13,9 @@ public class SpawnArea : MonoBehaviour
     {
         return new Vector2(Random.Range(_minX, _maxX), Random.Range(_minY, _maxY));
     }
+
+    public Vector2 GetMiddlePositionToSpawn()
+    {
+        return new Vector2();
+    }
 }
