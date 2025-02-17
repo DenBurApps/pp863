@@ -69,6 +69,7 @@ namespace ChaosGame
             _pauseScreen.Disable();
             _loseScreen.gameObject.SetActive(false);
             _rulesScreen.gameObject.SetActive(false);
+            _homeButton.gameObject.SetActive(true);
             _flashSpawner.StartSpawnMultiple();
             _inputHandler.StartDetectingTouch();
             ResetRound();
@@ -125,6 +126,7 @@ namespace ChaosGame
             _flashSpawner.StopSpawnMultiple();
             _flashSpawner.ReturnAllObjectsToPool();
             _loseScreen.Enable(_score);
+            _homeButton.gameObject.SetActive(false);
         }
         
         private void OpenRules()

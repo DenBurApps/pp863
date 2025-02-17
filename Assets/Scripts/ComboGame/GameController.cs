@@ -94,6 +94,7 @@ namespace ComboGame
             _rememberPlane.SetActive(true);
             _stopButton.gameObject.SetActive(false);
             _rulesButton.gameObject.SetActive(false);
+            _homeButton.gameObject.SetActive(true);
         }
 
         private void EnableStartGameButton()
@@ -195,6 +196,7 @@ namespace ComboGame
             _flashSpawner.StopSpawn();
             _flashSpawner.ReturnAllObjectsToPool();
             _loseScreen.Enable(_score);
+            _homeButton.gameObject.SetActive(false);
             _score = 0;
         }
     }

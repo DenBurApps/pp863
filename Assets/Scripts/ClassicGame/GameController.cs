@@ -65,6 +65,7 @@ namespace ClassicGame
             _pauseScreen.Disable();
             _loseScreen.gameObject.SetActive(false);
             _rulesScreen.gameObject.SetActive(false);
+            _homeButton.gameObject.SetActive(true);
             _flashSpawner.StartSpawn();
             _touchInputHandler.StartDetectingTouch();
         }
@@ -108,6 +109,7 @@ namespace ClassicGame
             _flashSpawner.ReturnAllObjectsToPool();
             RecordHolder.AddData(_gameType, _score);
             _loseScreen.Enable(_score);
+            _homeButton.gameObject.SetActive(false);
         }
 
         private void UpdateScoreText()

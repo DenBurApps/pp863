@@ -66,6 +66,7 @@ namespace SpeedGame
             _rulesScreen.gameObject.SetActive(false);
             _flashSpawner.StartSpawn();
             _touchInputHandler.StartDetectingTouch();
+            _homeButton.gameObject.SetActive(true);
         }
 
         private void PauseGame()
@@ -112,6 +113,7 @@ namespace SpeedGame
             _flashSpawner.ReturnAllObjectsToPool();
             RecordHolder.AddData(_gameType, _score);
             _loseScreen.Enable(_score);
+            _homeButton.gameObject.SetActive(false);
         }
 
         private void UpdateScoreText()
