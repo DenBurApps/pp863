@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SpeedScene.unity
     guid: e82d9de123263e34793a59d7d86f1d9c
+  - enabled: 1
+    path: Assets/Scenes/TestScene.unity
+    guid: 10739b2c06397aa459d4934697a3f3a1
   m_configObjects: {}
